@@ -4,14 +4,10 @@
 """Interface for helm operations"""
 
 import subprocess
-import time
 
 from aiopslab.service.kubectl import KubeCtl
-from aiopslab.config import Config, get_kube_context
-from aiopslab.paths import BASE_DIR
-
-config = Config(BASE_DIR / "config.yml")
-
+from aiopslab.config import get_kube_context
+from aiopslab.paths import config
 
 class Helm:
     @staticmethod
